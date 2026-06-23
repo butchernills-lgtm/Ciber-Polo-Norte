@@ -2,88 +2,303 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Cyber Polo Norte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<title>Ciber Polo Norte</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* LOGO HACKER/GAMER */
+.logo{
+position:fixed;
+top:15px;
+left:15px;
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 15px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(6px);
+border:1px solid rgba(255,0,0,0.4);
+border-radius:14px;
+z-index:10000;
+}
+
+.logo-icon{
+font-size:30px;
+color:red;
+text-shadow:0 0 10px red, 0 0 20px red;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1;
+}
+
+.logo-main{
+font-size:18px;
+font-weight:bold;
+letter-spacing:2px;
+color:white;
+}
+
+.logo-sub{
+font-size:10px;
+letter-spacing:3px;
+color:#ff4444;
+}
+
+/* HERO */
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:70px;
+color:red;
+text-shadow:0 0 25px red;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff3b3b;
+transform:scale(1.05);
+}
+
+/* SECCIONES */
+section{
+padding:80px 10%;
+}
+
+.titulo{
+font-size:45px;
+color:red;
+margin-bottom:50px;
+text-align:center;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARDS */
+.card{
+background:#111;
+border:1px solid #2b2b2b;
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 0 15px rgba(255,0,0,0.1);
+cursor:pointer;
+text-decoration:none;
+color:white;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,0,0,0.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+color:red;
+margin-bottom:15px;
+font-size:28px;
+}
+
+.card-content p{
+color:#ccc;
+line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+background:black;
+text-align:center;
+padding:25px;
+color:#777;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:28px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+text-decoration:none;
+z-index:9999;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:45px;}
+.hero p{font-size:18px;}
+.titulo{font-size:35px;}
+}
+</style>
 </head>
 
 <body>
 
-<div class="nav">
-<div class="logo">CYBER POLO NORTE</div>
-
-<div>
-<a href="index.html">Inicio</a>
-<a href="gaming.html">Gaming</a>
-<a href="tecnico.html">Técnico</a>
-<a href="impresiones.html">Impresiones</a>
-<a href="contacto.html">Contacto</a>
+<!-- LOGO -->
+<div class="logo">
+<div class="logo-icon">⌬</div>
+<div class="logo-text">
+<span class="logo-main">CIBER</span>
+<span class="logo-sub">POLO NORTE</span>
 </div>
 </div>
 
+<!-- HERO -->
+<header>
 <div class="hero">
-<h1>CYBER POLO NORTE</h1>
-
-<p>
-Mantenimiento • Gaming • Servicio Técnico • Impresiones • Fotos Carnet • Laminados • USB
-</p>
-
-<a class="btn" href="#servicios">VER SERVICIOS</a>
+<h1>CIBER POLO NORTE</h1>
+<p>Mantenimiento • Gaming • Servicio Técnico • Impresiones • Fotos Carnet • Laminados • USB</p>
+<a href="#servicios" class="btn">Entrar al Ciber</a>
 </div>
+</header>
 
-<section id="servicios" class="grid">
+<!-- SERVICIOS -->
+<section id="servicios">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<h2 class="titulo">Nuestros Servicios</h2>
+
+<div class="grid">
+
+<!-- GAMING -->
+<a href="gaming.html" class="card">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-<h3>Gaming</h3>
-<p>PC gamer y consolas.</p>
+<h3>Gaming y Consolas</h3>
+<p>PlayStation, videojuegos, configuración gamer y optimización.</p>
 </div>
-</div>
+</a>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<!-- TÉCNICO -->
+<a href="tecnico.html" class="card">
+<img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-<h3>Técnico</h3>
-<p>Windows, drivers y reparación.</p>
+<h3>Servicio Técnico</h3>
+<p>Windows, Office, mantenimiento, drivers y reparación de computadoras.</p>
 </div>
-</div>
+</a>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43">
+<!-- IMPRESIONES -->
+<a href="impresiones.html" class="card">
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-<h3>Impresiones</h3>
-<p>Documentos y fotos carnet.</p>
+<h3>Impresiones y Digital</h3>
+<p>Impresiones, fotos carnet, currículums, laminados y más.</p>
 </div>
-</div>
+</a>
 
+</div>
 </section>
 
-<section class="contact">
-<div class="box">
-<h3>Dirección</h3>
-<p>Colonia Céleo González</p>
-<p>Al lado de Pollolandia</p>
-</div>
+<!-- CONTACTO -->
+<section id="contacto">
 
-<div class="box">
+<h2 class="titulo">Contacto y Dirección</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
 <h3>Contacto</h3>
-<p>📞 9338-3182</p>
-<p>📧 butchernills@gmail.com</p>
+<p>
+📞 +504 9338-3182 <br><br>
+📧 butchernills@gmail.com
+</p>
+</div>
 </div>
 
-<div class="box">
-<h3>Horario</h3>
-<p>Lunes - Domingo</p>
-<p>8:00 AM - 8:00 PM</p>
+<div class="card">
+<div class="card-content">
+<h3>Dirección</h3>
+<p>
+📍 colonia celeo gonzales al lado de pollolandia
+</p>
 </div>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Cyber Polo Norte
+<p>© 2026 Ciber Polo Norte</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/50493383182">💬</a>
+<a href="https://wa.me/50493383182" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
